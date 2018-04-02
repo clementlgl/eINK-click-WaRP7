@@ -6,11 +6,12 @@
 #include <sys/ioctl.h>
 #include <linux/types.h>
 #include <linux/spi/spidev.h>
-#include "eink-click.h"
+#include "eink_click.h"
 
 int main(int argc, char * argv[])
 {
     int ret;
+    
     int spi = open("/dev/spidev0.0", O_RDWR);
 
     if (spi < 0){
@@ -55,6 +56,6 @@ int main(int argc, char * argv[])
     }
     return ret;
 
-    eink_click_init();
+    eink_click_init(3);
 }
 

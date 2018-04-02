@@ -1,5 +1,5 @@
 CFLAGS=-I.
-OBJ = eink-click.o main.o
+OBJ = eink_click.o main.o
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
